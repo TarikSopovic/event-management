@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>Event Management System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/spapp.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#home">EventSys</a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+          <li class="nav-item"><a class="nav-link" href="#login">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item">
+            <button id="themeToggle" class="btn btn-outline-light btn-sm ms-2">🌙 Dark Mode</button>
+          </li>
+          
+
+          <li class="nav-item dropdown" id="userDropdown" style="display: none;">
+            <a class="nav-link dropdown-toggle d-flex align-items-center gap-1" href="#" role="button" data-bs-toggle="dropdown">
+              <i class="bi bi-person-circle" style="font-size: 1.3rem;"></i> <span id="userName">Tarik</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end">
+              <li><a class="dropdown-item" href="#profile"><i class="bi bi-person me-2"></i>Profile</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item text-danger" href="#" id="logoutBtn"><i class="bi bi-box-arrow-right me-2"></i>Logout</a></li>
+            </ul>
+          </li>          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main id="spapp" style="margin-top: 90px;" class="container">
+    <section id="home" data-load="views/home.html"></section>
+    <section id="about" data-load="views/about.html"></section>
+    <section id="events" data-load="views/events.html"></section>
+    <section id="login" data-load="views/login.html"></section>
+    <section id="register" data-load="views/register.html"></section>
+    <section id="dashboard" data-load="views/dashboard.html"></section>
+    <section id="profile" data-load="views/profile.html"></section>
+    <section id="admin-events" data-load="views/admin-events.html"></section>
+    <section id="contact" data-load="views/contact.html"></section>
+    <section id="error_404"><h1>404 - Page not found</h1></section>
+  </main>
+
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <div class="container">
+      <small>&copy; 2025 EventSys. All rights reserved.</small>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/jquery.spapp.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top" class="btn btn-primary"
+  style="position: fixed; bottom: 40px; right: 20px; display: none; z-index: 999;">
+  ↑
+</button>
+
+<script>
+  window.onscroll = function () {
+    document.getElementById("scrollTopBtn").style.display = (document.documentElement.scrollTop > 100) ? "block" : "none";
+  };
+
+  function scrollToTop() {
+    document.documentElement.scrollTop = 0;
+  }
+</script>
+
+</body>
+
+</html>
