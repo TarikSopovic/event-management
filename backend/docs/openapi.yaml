@@ -1,0 +1,25 @@
+openapi: 3.0.0
+info:
+  title: Event Management API
+  description: OpenAPI documentation for all CRUD operations in the Event Management system.
+  version: "1.0.0"
+servers:
+  - url: http://localhost:8000
+paths:
+  /users:
+    get:
+      summary: Get all users
+      responses:
+        '200':
+          description: List of users
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: integer
+        name:
+          type: string
+        email:
+          type: string
