@@ -1,0 +1,82 @@
+<section class="py-5">
+    <div class="container">
+      <h2 class="mb-4">All Events</h2>
+
+      <section class="py-5">
+        <div class="container">
+          <h2 class="mb-4 text-center">Upcoming Events</h2>
+      
+          <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Tech Conference 2025</h5>
+              <p class="card-text">Join us for a day of tech talks, networking, and innovation.</p>
+              <p class="card-text">
+                <i class="bi bi-calendar-event"></i>
+                <small class="text-muted">April 15, 2025</small>
+                &nbsp; | &nbsp;
+                <i class="bi bi-geo-alt"></i>
+                <small class="text-muted">Sarajevo</small>
+              </p>
+              <button class="btn btn-success">Register</button>
+            </div>
+          </div>
+      
+          <div class="card mb-3 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title">Creative Arts Workshop</h5>
+              <p class="card-text">Explore your creativity in this hands-on event for art lovers.</p>
+              <p class="card-text">
+                <i class="bi bi-calendar-event"></i>
+                <small class="text-muted">May 10, 2025</small>
+                &nbsp; | &nbsp;
+                <i class="bi bi-geo-alt"></i>
+                <small class="text-muted">Tuzla</small>
+              </p>
+              <button class="btn btn-success">Register</button>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+  
+          <div class="border-top pt-3">
+            <h6>Reviews:</h6>
+            <ul id="reviewList" class="list-unstyled">
+              <li class="mb-2">
+                ⭐⭐⭐⭐☆ – "Great event, well organized!" – <strong>Amra</strong>
+              </li>
+              <li class="mb-2">
+                ⭐⭐⭐⭐⭐ – "Loved the speakers!" – <strong>Tarik</strong>
+              </li>
+            </ul>
+  
+            <form id="reviewForm">
+              <div class="mb-2">
+                <label for="reviewName" class="form-label">Your Name</label>
+                <input type="text" class="form-control" id="reviewName" required>
+              </div>
+              <div class="mb-2">
+                <label for="reviewText" class="form-label">Your Review</label>
+                <textarea class="form-control" id="reviewText" rows="2" required></textarea>
+              </div>
+              <div class="mb-2">
+                <label for="reviewRating" class="form-label">Rating</label>
+                <select class="form-select" id="reviewRating" required>
+                  <option value="">Choose...</option>
+                  <option value="5">⭐⭐⭐⭐⭐</option>
+                  <option value="4">⭐⭐⭐⭐</option>
+                  <option value="3">⭐⭐⭐</option>
+                  <option value="2">⭐⭐</option>
+                  <option value="1">⭐</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary">Submit Review</button>
+              <div id="reviewMsg" class="text-success mt-2" style="display:none;">Thank you for your review!</div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  

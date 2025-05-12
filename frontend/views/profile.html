@@ -1,0 +1,98 @@
+<section class="py-5">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+
+        <div class="card shadow-sm">
+          <div class="card-body text-center">
+
+            <!-- Profile Icon -->
+            <div class="mb-3">
+              <i class="bi bi-person-circle" style="font-size: 4rem; color: #0d6efd;"></i>
+            </div>
+
+            <h4 class="mb-1">John Doe</h4>
+            <p class="text-muted mb-4">john@example.com</p>
+
+            <!-- Profile Details -->
+            <form>
+              <div class="mb-3 text-start">
+                <label for="profileName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="profileName" value="John Doe" disabled>
+              </div>
+
+              <div class="mb-3 text-start">
+                <label for="profileEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="profileEmail" value="john@example.com" disabled>
+              </div>
+
+              <div class="mb-3 text-start">
+                <label for="profileRole" class="form-label">Role</label>
+                <input type="text" class="form-control" id="profileRole" value="User" disabled>
+              </div>
+
+              <!-- Alerts -->
+              <div id="profileMessage" class="alert d-none"></div>
+
+              <!-- Buttons -->
+              <div class="d-grid gap-2 mt-4">
+                <button type="button" class="btn btn-outline-primary" onclick="showProfileEditAlert()">Edit Profile</button>
+                <button type="button" class="btn btn-outline-danger" onclick="showLogoutAlert()">Logout</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function showProfileEditAlert() {
+    const msg = document.getElementById("profileMessage");
+    msg.classList.remove("d-none", "alert-danger");
+    msg.classList.add("alert", "alert-info");
+    msg.innerText = "Edit functionality coming soon!";
+  }
+
+  function showLogoutAlert() {
+    const msg = document.getElementById("profileMessage");
+    msg.classList.remove("d-none", "alert-info");
+    msg.classList.add("alert", "alert-success");
+    msg.innerText = "Successfully logged out (demo message).";
+  }
+</script>
+
+<style>
+  main#spapp {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .nav-link {
+    transition: 0.3s;
+  }
+
+  .nav-link:hover {
+    color: #0d6efd !important;
+    text-decoration: underline;
+  }
+
+  section {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
